@@ -51,3 +51,6 @@ function dl () {
 }
 
 export exa_params=($exa_params --no-icons)
+
+path+=('$HOME/.local/bin')
+export PATH

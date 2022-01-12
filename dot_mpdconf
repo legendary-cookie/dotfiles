@@ -1,0 +1,14 @@
+audio_output {
+	type "pulse"
+	name "pulse audio"
+}
+
+bind_to_address "0.0.0.0"
+port "6600"
+password "mpdsecret@read,add,control,admin"
+
+music_directory "/home/vincent/.mpd/music"
+pid_file "/home/vincent/.mpd/mpd.pid"
+db_file "/home/vincent/.mpd/mpd.db"
+state_file "/home/vincent/.mpd/mpdstate"
+playlist_directory "/home/vincent/.mpd/playlists"

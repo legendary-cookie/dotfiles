@@ -1,0 +1,24 @@
+[user]
+	email = github.com@xolley.de
+	name = legendary-cookie
+	signingkey = 2AE9CB7A047FE66E
+[init]
+	defaultBranch = master
+[core]
+	autocrlf = input
+[url "ssh://aur@aur.archlinux.org/"]
+    insteadOf = "aur:"
+
+[url "git@github.com:"]
+		insteadOf = "hub:"
+[pull]
+	rebase = false
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[credential]
+	helper = /usr/lib/git-core/git-credential-libsecret
+[commit]
+	gpgsign = true
