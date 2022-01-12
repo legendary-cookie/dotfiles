@@ -1,0 +1,53 @@
+##
+# Prompt setup
+##
+PROMPT='%F{226}%~%f -> '
+autoload -Uz compinit
+compinit
+##
+# Plugins setup
+##
+if [ ! -d "${HOME}/.zgenom" ]
+then
+	echo "zgenom wasn't cloned, cloning it now"
+	git clone https://github.com/jandamm/zgenom "${HOME}/.zgenom"
+fi
+
+source "${HOME}/.zgenom/zgenom.zsh"
+zgenom autoupdate
+
+if ! zgenom saved; then
+	echo "Creating a zgenom save"
+	zgenom load zsh-users/zsh-syntax-highlighting
+	zgenom load zsh-users/zsh-completions
+	zgenom load reegnz/jq-zsh-plugin
+	zgenom load supercrabtree/k
+	zgenom load zpm-zsh/material-colors
+	zgenom load zpm-zsh/ls
+	zgenom load Game4Move78/zsh-bitwarden
+	zgenom load nocttuam/autodotenv
+	zgenom load twang817/zsh-clipboard
+	##zgenom load marlonrichert/zsh-autocomplete
+	zgenom save
+	zgenom compile "$HOME/.zshrc"
+	#zgenom compile $ZDOTDIR
+fi
+
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+
+alias grep="rg"
+alias ducks="du -sh * | sort -hr | head"
+alias lg="lazygit"
+alias mpc="mpc -h mpdsecret@0.0.0.0 -p 6600"
+alias neofetch="freshfetch"
+# yt link / id = first arg
+function dl () {
+	yt-dlp --embed-thumbnail \
+		--add-metadata \
+		--extract-audio \
+		--audio-format mp3 \
+		$1
+}
+
+export exa_params=($exa_params --no-icons)
