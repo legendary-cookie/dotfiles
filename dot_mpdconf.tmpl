@@ -1,0 +1,14 @@
+audio_output {
+	type "pulse"
+	name "pulse audio"
+}
+
+bind_to_address "0.0.0.0"
+port "6600"
+password "mpdsecret@read,add,control,admin"
+
+music_directory "{{ .chezmoi.homeDir }}/.mpd/music"
+pid_file "{{ .chezmoi.homeDir }}/.mpd/mpd.pid"
+db_file "{{ .chezmoi.homeDir }}/.mpd/mpd.db"
+state_file "{{ .chezmoi.homeDir }}/.mpd/mpdstate"
+playlist_directory "{{ .chezmoi.homeDir }}/.mpd/playlists"
