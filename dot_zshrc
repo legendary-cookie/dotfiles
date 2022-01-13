@@ -41,6 +41,7 @@ alias ducks="du -sh * | sort -hr | head"
 alias lg="lazygit"
 alias mpc="mpc -h mpdsecret@0.0.0.0 -p 6600"
 alias neofetch="freshfetch"
+alias musectl="ncmpcpp -h mpdsecret@localhost"
 # yt link / id = first arg
 function dl () {
 	yt-dlp --embed-thumbnail \
@@ -52,5 +53,5 @@ function dl () {
 
 export exa_params=($exa_params --no-icons)
 
-path+=('$HOME/.local/bin')
+path+=("$HOME/.local/bin")
 export PATH
