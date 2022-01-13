@@ -168,9 +168,7 @@ bindsym $mod+r mode "resize"
 
 exec "setxkbmap -layout de,de"
 exec "ibus-daemon -drxR"
-exec "killall mpd;mpd"
 exec "polybar standard"
-#exec "feh --bg-scale /home/vincent/Desktop/walls/Your-Name-beautiful-sky-meteor-anime_3840x2160.jpg"
 exec "/home/vincent/.fehbg"
 
 for_window [class=".*"] border pixel 0
