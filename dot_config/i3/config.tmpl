@@ -185,5 +185,5 @@ for_window [window_role="About"] floating enable
 #exec --no-startup-id "alacritty --class AlaMixer --command pulsemixer"
 
 assign [instance="AlaMusic"] 3
-exec --no-startup-id "alacritty --class AlaMusic --command sh -c 'sleep 2; /home/vincent/.config/i3/start-music.sh'"
+exec --no-startup-id "alacritty --class AlaMusic --command sh -c 'sleep 2; {{ .chezmoi.homeDir }}/.config/i3/start-music.sh'"
 exec --no-startup-id "i3-msg 'workspace 1'"
