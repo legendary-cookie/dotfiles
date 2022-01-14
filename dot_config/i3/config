@@ -171,5 +171,10 @@ exec "ibus-daemon -drxR"
 exec "polybar standard"
 exec "/home/vincent/.fehbg"
 
-for_window [class=".*"] border pixel 0
+for_window [class=".*"] border pixel 1
 for_window [window_role="About"] floating enable
+
+assign [instance="AlaMusic"] 3
+exec --no-startup-id "alacritty --class AlaMusic --command ncmpcpp -h mpdsecret@localhost"
+exec --no-startup-id "alacritty --class AlaMusic --command cava"
+exec --no-startup-id "alacritty --class AlaMusic --command pulsemixer"
