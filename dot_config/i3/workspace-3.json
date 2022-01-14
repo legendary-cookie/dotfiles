@@ -1,0 +1,83 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 2,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 600,
+       "width": 800,
+       "x": 0,
+       "y": 0
+    },
+    "marks": [],
+    "name": "cava",
+    "percent": 0.5,
+    "swallows": [
+       {
+       // "class": "^Alacritty$",
+       "instance": "^AlaCava$"
+       // "machine": "^archmbp$",
+       // "title": "^cava$"
+       }
+    ],
+    "type": "con"
+}
+
+{
+    // splith split container with 2 children
+    "border": "normal",
+    "floating": "auto_off",
+    "layout": "splith",
+    "marks": [],
+    "percent": 0.5,
+    "type": "con",
+    "nodes": [
+        {
+            "border": "pixel",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 600,
+               "width": 800,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "347aidan - MEMORIES!",
+            "percent": 0.5,
+            "swallows": [
+               {
+               // "class": "^Alacritty$",
+               "instance": "^AlaMusic$"
+               // "machine": "^archmbp$",
+               // "title": "^347aidan\\ \\-\\ MEMORIES\\!$"
+               }
+            ],
+            "type": "con"
+        },
+        {
+            "border": "pixel",
+            "current_border_width": 2,
+            "floating": "auto_off",
+            "geometry": {
+               "height": 600,
+               "width": 800,
+               "x": 0,
+               "y": 0
+            },
+            "marks": [],
+            "name": "pulsemixer",
+            "percent": 0.5,
+            "swallows": [
+               {
+               // "class": "^Alacritty$",
+               "instance": "^AlaMixer$"
+               // "machine": "^archmbp$",
+               // "title": "^pulsemixer$"
+               }
+            ],
+            "type": "con"
+        }
+    ]
+}
+
