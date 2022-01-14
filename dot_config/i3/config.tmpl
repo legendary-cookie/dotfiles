@@ -175,11 +175,16 @@ for_window [class=".*"] border pixel 1
 for_window [window_role="About"] floating enable
 
 
-exec --no-startup-id "i3-msg 'workspace 3; append_layout {{ .chezmoi.homeDir }}/.config/i3/workspace-3.json'"
+#exec --no-startup-id "i3-msg 'workspace 3; append_layout {{ .chezmoi.homeDir }}/.config/i3/workspace-3.json'; workspace 1;"
+
+#assign [instance="AlaMusic"] 3
+#assign [instance="AlaMixer"] 3
+#assign [instance="AlaCava"] 3
+#exec --no-startup-id "alacritty --class AlaMusic --command ncmpcpp -h mpdsecret@localhost"
+#exec --no-startup-id "alacritty --class AlaCava --command cava"
+#exec --no-startup-id "alacritty --class AlaMixer --command pulsemixer"
 
 assign [instance="AlaMusic"] 3
-assign [instance="AlaMixer"] 3
-assign [instance="AlaCava"] 3
-exec --no-startup-id "alacritty --class AlaMusic --command ncmpcpp -h mpdsecret@localhost"
-exec --no-startup-id "alacritty --class AlaCava --command cava"
-exec --no-startup-id "alacritty --class AlaMixer --command pulsemixer"
+exec --no-startup-id "alacritty --class AlaMusic --command tmux new 'cava -p {{ .chezmoi.homeDir }}/.config/cava/config' \; split-window -v 'pulsemixer' \; split-window -h 'sleep 4\;ncmpcpp -h mpdsecret@localhost'"
+
+exec --no-startup-id "i3-msg 'workspace 1'"
