@@ -37,10 +37,10 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
-bindsym XF86AudioPlay exec mpc -h mpdsecret@0.0.0.0 -p 6600 toggle
-bindsym XF86AudioPause exec mpc -h mpdsecret@0.0.0.0 -p 6600 toggle
-bindsym XF86AudioNext exec mpc -h mpdsecret@0.0.0.0 -p 6600 next
-bindsym XF86AudioPrev exec mpc -h mpdsecret@0.0.0.0 -p 6600 prev
+bindsym XF86AudioPlay exec {{ .chezmoi.homeDir }}/.config/i3/mpc.sh toggle
+bindsym XF86AudioPause exec {{ .chezmoi.homeDir }}/.config/i3/mpc.sh toggle
+bindsym XF86AudioNext exec {{ .chezmoi.homeDir }}/.config/i3/mpc.sh next
+bindsym XF86AudioPrev exec {{ .chezmoi.homeDir }}/.config/i3/mpc.sh prev
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -186,8 +186,5 @@ for_window [window_role="About"] floating enable
 
 assign [instance="AlaMusic"] 3
 exec --no-startup-id "alacritty --class AlaMusic --command sh -c 'sleep 2; {{ .chezmoi.homeDir }}/.config/i3/start-music.sh'"
-
-assign [instance="AlaTop"] 4
-exec --no-startup-id "alacritty --class AlaTop --command gotop"
 
 exec --no-startup-id "i3-msg 'workspace 1'"
