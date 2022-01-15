@@ -39,9 +39,9 @@ bindkey "^[[1;5D" backward-word
 alias grep="rg"
 alias ducks="du -sh * | sort -hr | head"
 alias lg="lazygit"
-alias mpc="mpc -h mpdsecret@0.0.0.0 -p 6600"
+alias mpc="mpc -h $HOME/.mpd/socket"
 alias neofetch="freshfetch"
-alias musectl="ncmpcpp -h mpdsecret@localhost"
+alias musectl="ncmpcpp"
 # yt link / id = first arg
 function dl () {
 	yt-dlp --embed-thumbnail \

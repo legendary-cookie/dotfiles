@@ -1,7 +1,6 @@
 [mpd]
 mpd_music_dir = "/home/vincent/.mpd/music"
-mpd_host = "mpdsecret@127.0.0.1"
-mpd_port = "6600"
+mpd_host = "/home/vincent/.mpd/socket"
 mpd_crossfade_time = "2"
 
 [visualizer]

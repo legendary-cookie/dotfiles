@@ -186,4 +186,8 @@ for_window [window_role="About"] floating enable
 
 assign [instance="AlaMusic"] 3
 exec --no-startup-id "alacritty --class AlaMusic --command sh -c 'sleep 2; {{ .chezmoi.homeDir }}/.config/i3/start-music.sh'"
+
+assign [instance="AlaTop"] 4
+exec --no-startup-id "alacritty --class AlaTop --command gotop"
+
 exec --no-startup-id "i3-msg 'workspace 1'"

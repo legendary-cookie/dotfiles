@@ -10,9 +10,9 @@ audio_output {
 	format "44100:16:2"
 }
 
-bind_to_address "127.0.0.1"
+#bind_to_address "127.0.0.1"
+bind_to_address	"{{ .chezmoi.homeDir }}/.mpd/socket"
 port "6600"
-password "mpdsecret@read,add,control,admin"
 
 music_directory "{{ .chezmoi.homeDir }}/.mpd/music"
 pid_file "{{ .chezmoi.homeDir }}/.mpd/mpd.pid"
