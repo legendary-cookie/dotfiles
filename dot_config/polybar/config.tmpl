@@ -146,10 +146,7 @@ label-urgent-padding = 2
 [module/mpd]
 type = internal/mpd
 
-host = 127.0.0.1
-port = 6600
-password = mpdsecret
-
+host = {{ .chezmoi.homeDir }}/.mpd/socket 
 format-online = <icon-prev> <toggle> <icon-stop> <icon-next> <label-song>
 
 icon-prev = 
