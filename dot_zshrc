@@ -39,7 +39,7 @@ bindkey "^[[1;5D" backward-word
 alias grep="rg"
 alias ducks="du -sh * | sort -hr | head"
 alias lg="lazygit"
-alias mpc="mpc -h $HOME/.mpd/socket"
+alias mpc="mpc -h /var/mpd/socket"
 alias neofetch="freshfetch"
 alias musectl="ncmpcpp"
 # yt link / id = first arg
@@ -55,3 +55,5 @@ export exa_params=($exa_params --no-icons)
 
 path+=("$HOME/.local/bin")
 export PATH
+
+alias defragdir="sudo btrfs fi de -r -v -czstd ."

@@ -11,11 +11,11 @@ audio_output {
 }
 
 #bind_to_address "127.0.0.1"
-bind_to_address	"{{ .chezmoi.homeDir }}/.mpd/socket"
+bind_to_address	"/var/mpd/socket"
 port "6600"
 
-music_directory "{{ .chezmoi.homeDir }}/.mpd/music"
-pid_file "{{ .chezmoi.homeDir }}/.mpd/mpd.pid"
-db_file "{{ .chezmoi.homeDir }}/.mpd/mpd.db"
-state_file "{{ .chezmoi.homeDir }}/.mpd/mpdstate"
-playlist_directory "{{ .chezmoi.homeDir }}/.mpd/playlists"
+music_directory "/var/mpd/music"
+pid_file "/var/mpd/mpd.pid"
+db_file "/var/mpd/mpd.db"
+state_file "/var/mpd/mpdstate"
+playlist_directory "/var/mpd/playlists"

@@ -1,6 +1,6 @@
 [mpd]
-mpd_music_dir = "/home/vincent/.mpd/music"
-mpd_host = "/home/vincent/.mpd/socket"
+mpd_music_dir = "/var/mpd/music"
+mpd_host = "/var/mpd/socket"
 mpd_crossfade_time = "2"
 
 [visualizer]

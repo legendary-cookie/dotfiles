@@ -1,2 +1,2 @@
 #!/bin/sh
-mpc -h $HOME/.mpd/socket $@
+mpc -h /var/mpd/socket $@
