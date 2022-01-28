@@ -5,6 +5,12 @@ PROMPT='%F{226}%~%f -> '
 autoload -Uz compinit
 compinit
 ##
+# Path setup
+##
+path+=('/opt/cross/bin')
+path+=("$HOME/.local/bin")
+export PATH
+##
 # Plugins setup
 ##
 if [ ! -d "${HOME}/.zgenom" ]
@@ -52,8 +58,7 @@ function dl () {
 }
 
 export exa_params=($exa_params --no-icons)
-
-path+=("$HOME/.local/bin")
-export PATH
-
 alias defragdir="sudo btrfs fi de -r -v -czstd ."
+export HISTFILE=~/.zsh_history
+export HISTSIZE=50
+export SAVEHIST=50
