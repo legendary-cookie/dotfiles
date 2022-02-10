@@ -170,8 +170,8 @@ bindsym $mod+r mode "resize"
 
 exec "setxkbmap -layout de,de"
 exec "ibus-daemon -drxR"
-exec "polybar standard"
-exec "/home/vincent/.fehbg"
+exec "bash {{ .chezmoi.homeDir }}/.config/polybar/launch.sh --forest"
+exec "{{ .chezmoi.homeDir }}/.fehbg"
 
 for_window [class=".*"] border pixel 1
 for_window [window_role="About"] floating enable

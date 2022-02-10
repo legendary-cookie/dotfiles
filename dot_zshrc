@@ -9,6 +9,7 @@ compinit
 ##
 path+=('/opt/cross/bin')
 path+=("$HOME/.local/bin")
+path+=("$HOME/.yarn/bin")
 export PATH
 ##
 # Plugins setup
@@ -48,6 +49,8 @@ alias lg="lazygit"
 alias mpc="mpc -h /var/mpd/socket"
 alias neofetch="freshfetch"
 alias musectl="ncmpcpp"
+alias nv="nvim"
+alias gc="git clone"
 # yt link / id = first arg
 function dl () {
 	yt-dlp --embed-thumbnail \
@@ -60,5 +63,7 @@ function dl () {
 export exa_params=($exa_params --no-icons)
 alias defragdir="sudo btrfs fi de -r -v -czstd ."
 export HISTFILE=~/.zsh_history
-export HISTSIZE=50
-export SAVEHIST=50
+export HISTSIZE=500
+export SAVEHIST=500
+
+export GPGKEY="D84F69EF73458323"
