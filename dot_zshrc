@@ -10,6 +10,7 @@ compinit
 path+=('/opt/cross/bin')
 path+=("$HOME/.local/bin")
 path+=("$HOME/.yarn/bin")
+path+=("$HOME/go/bin")
 export PATH
 ##
 # Plugins setup
@@ -32,7 +33,7 @@ if ! zgenom saved; then
 	zgenom load zpm-zsh/material-colors
 	zgenom load zpm-zsh/ls
 	zgenom load Game4Move78/zsh-bitwarden
-	zgenom load nocttuam/autodotenv
+	zgenom load legendary-cookie/autodotenv
 	zgenom load twang817/zsh-clipboard
 	##zgenom load marlonrichert/zsh-autocomplete
 	zgenom save
@@ -66,4 +67,9 @@ export HISTFILE=~/.zsh_history
 export HISTSIZE=500
 export SAVEHIST=500
 
-export GPGKEY="D84F69EF73458323"
+#export GPGKEY="D84F69EF73458323"
+export GPGKEY="B312851548E81779"
+
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitpro/devkitARM
+export DEVKITPPC=/opt/devkitpro/devkitPPC
