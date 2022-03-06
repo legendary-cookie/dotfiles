@@ -1,7 +1,7 @@
 [user]
 	email = vincent.schweiger@xolley.de
 	name = legendary-cookie
-	signingkey = D84F69EF73458323
+	signingkey = B312851548E81779
 [init]
 	defaultBranch = master
 [core]
